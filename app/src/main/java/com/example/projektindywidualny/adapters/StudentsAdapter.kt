@@ -9,8 +9,11 @@ import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.lifecycle.LiveData
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.projektindywidualny.MainActivity
 import com.example.projektindywidualny.R
+import com.example.projektindywidualny.fragments.EditStudentFragmentDirections
+import com.example.projektindywidualny.fragments.StudentsFragmentDirections
 import com.example.projektindywidualny.models.Student
 import kotlinx.android.synthetic.main.fragment_students.view.*
 
@@ -26,11 +29,6 @@ class StudentsAdapter(private val data:LiveData<List<Student>>) : RecyclerView.A
         val deleteBtn: ImageButton = view.findViewById(R.id.deleteStudent)
         val editBtn: ImageButton = view.findViewById(R.id.editStudent)
 
-        init {
-            editBtn.setOnClickListener {
-                Navigation.findNavController(view).navigate(R.id.action_studentsFragment_to_editStudentFragment)
-            }
-        }
     }
 
     override fun getItemCount(): Int {
@@ -52,6 +50,15 @@ class StudentsAdapter(private val data:LiveData<List<Student>>) : RecyclerView.A
         holderStudentsList.deleteBtn.setOnClickListener {
             student?.let { repository.deleteStudent(it) }
         }
+        holderStudentsList.editBtn.setOnClickListener {
+            val action = student?.let {
+                StudentsFragmentDirections.actionStudentsFragmentToEditStudentFragment(it)
+            }
+            if (action != null) {
+                holderStudentsList.itemView.findNavController().navigate(action)
+            }
+        }
+
     }
 
 }

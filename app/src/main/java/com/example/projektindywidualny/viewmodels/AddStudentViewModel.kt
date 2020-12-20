@@ -12,9 +12,5 @@ class AddStudentViewModel : ViewModel() {
     fun addStudent() {
         repository.addStudent(Student(firstNamePlainText!!, lastNamePlainText!!, classPlainText!!))
     }
-    fun updateStudent() {
-        repository.updateStudent(Student(firstNamePlainText!!, lastNamePlainText!!, classPlainText!!))
-    }
-
 
 }

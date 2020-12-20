@@ -10,7 +10,7 @@ class EditStudentViewModel : ViewModel() {
     var lastNamePlainText: String? = null
     var classPlainText: String? = null
 
-    fun updateStudent() {
+    fun updateStudent(updatedStudent: Student) {
         repository.updateStudent(Student(firstNamePlainText!!, lastNamePlainText!!, classPlainText!!))
     }
 }
