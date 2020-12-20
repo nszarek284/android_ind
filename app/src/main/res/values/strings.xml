@@ -8,4 +8,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="subject_name_tv">nazwa</string>
+    <string name="save">Zapisz</string>
+    <string name="lastName">Nazwisko</string>
+    <string name="studentClass">Klasa</string>
+    <string name="name">Imię</string>
 </resources>

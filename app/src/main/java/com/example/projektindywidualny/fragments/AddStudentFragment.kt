@@ -18,7 +18,6 @@ import com.example.projektindywidualny.models.Student
 import com.example.projektindywidualny.databinding.AddStudentFragmentBinding
 
 class AddStudentFragment : Fragment() {
-    private val args by navArgs<AddStudentFragmentArgs>()
     companion object {
         fun newInstance() = AddStudentFragment()
         fun newInstance(student: Student): AddStudentFragment {
@@ -44,21 +43,13 @@ class AddStudentFragment : Fragment() {
         }.root
         val saveBtn = view.findViewById<Button>(R.id.saveStudent)
         val fName = view.findViewById<EditText>(R.id.firstNamePlainText)
-        val userID = args.currentStudent?.id;
-        arguments?.apply {
-            getString("firstName")?.let { viewModel.firstNamePlainText = it}
-            getString("lastName")?.let { viewModel.lastNamePlainText = it}
-            getString("classStudent")?.let { viewModel.classPlainText = it}
-        }
             val lname = view.findViewById<EditText>(R.id.lastNamePlainText)
+            val studentClass = view.findViewById<EditText>(R.id.classStudent)
 
             saveBtn.setOnClickListener {
                 if (!fName.text.isNullOrBlank() && !lname.text.isNullOrBlank()) {
-                    if(userID == null)
                         viewModel.addStudent()
-                    else
-                        viewModel.updateStudent()
-                    Toast.makeText(requireContext(), "Wykonano",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Dodano",Toast.LENGTH_SHORT).show()
                     Navigation.findNavController(view)
                         .navigate(R.id.action_addStudentFragment_to_studentsFragment)
                 }

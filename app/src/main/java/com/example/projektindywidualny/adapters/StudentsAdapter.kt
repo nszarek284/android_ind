@@ -28,13 +28,7 @@ class StudentsAdapter(private val data:LiveData<List<Student>>) : RecyclerView.A
 
         init {
             editBtn.setOnClickListener {
-                Navigation.findNavController(view).navigate( R.id.action_studentsFragment_to_addStudentFragment,
-                    bundleOf(
-                       "firstName" to firstName.text,
-                        "lastName" to lastName.text,
-                        "classStudent" to classStudent.text
-                    )
-               )
+                Navigation.findNavController(view).navigate(R.id.action_studentsFragment_to_editStudentFragment)
             }
         }
     }
