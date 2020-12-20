@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.projektindywidualny.viewmodels.AddStudentViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+    tools:context=".fragments.AddStudentFragment">
+
+    <TextView
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imię"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/firstNamePlainText"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <EditText
+        android:id="@+id/firstNamePlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@={viewModel.firstNamePlainText}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <TextView
+        android:id="@+id/lastNameStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazwisko"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lastNamePlainText"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <EditText
+        android:id="@+id/lastNamePlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:text="@={viewModel.lastNamePlainText}"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNamePlainText" />
+
+    <TextView
+        android:id="@+id/classTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Klasa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/classPlainText"
+        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameStudent"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <EditText
+        android:id="@+id/classPlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@={viewModel.classPlainText}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNamePlainText"
+        app:layout_constraintVertical_bias="0.131" />
+
+    <Button
+        android:id="@+id/saveStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classPlainText"
+        app:layout_constraintVertical_bias="0.662" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

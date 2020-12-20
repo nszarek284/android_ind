@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Menu">
+
+    <Button
+        android:id="@+id/students"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/students"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/subjects"
+        app:layout_constraintVertical_bias="0.249" />
+
+    <Button
+        android:id="@+id/report"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/report"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/marks"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <Button
+        android:id="@+id/marks"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="@string/marks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/students"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <Button
+        android:id="@+id/subjects"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="112dp"
+        android:text="@string/subjects"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
